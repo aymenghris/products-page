@@ -1,0 +1,145 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --color1: #F96666;
+    --color2: #1B2430;
+    --color3: orange;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #e6e6e6;
+
+}
+
+.heading {
+    background-color: var(--color1);
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    margin: auto;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .heading h1 {
+        font-size: 21px;
+    }
+}
+
+.container {
+    width: 1180px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    gap: 35px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 650px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 320px;
+    }
+    
+}
+
+.box {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    /* display: flex; */
+    /* flex-direction: column;
+    text-align: center; */
+    display: grid;
+    grid-template-rows: 250px auto auto auto 25px 25px;
+    box-shadow: 5px 10px 10px 1px rgb(0, 0, 0, 12%);
+    gap: 9px;
+    grid-template-areas: 
+    "img" "pro-name" "desk" "price" "rating" "options";
+}
+
+/* GRID SETTINGS */
+.box img {
+    grid-area: img;
+    width: 100%;
+}
+
+.box h2 {
+    grid-area: pro-name;
+    font-size: 20px;
+}
+
+.box p {
+    grid-area: desk;
+    font-size: 12.5px;
+    line-height: 1.35;
+    color: var(--color2);
+}
+
+.box span {
+    grid-area: price;
+    font-weight: 700;
+}
+
+.box .rate {
+    grid-area: rating;
+    color: #F1C40F;
+    font-size: 13px;
+}
+
+.box .option {
+    grid-area: options;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+/* GRID SETTINGS */
+
+.box img:hover {
+    opacity: .95;
+    cursor: pointer;
+
+}
+
+.box .option a {
+    color: white;
+    background-color: var(--color1);
+    padding: 7px 11px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    border-radius: 45px;
+
+}
+
+.box .option a:hover {
+    background-color: #b14646;
+}
+
